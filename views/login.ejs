@@ -1,0 +1,62 @@
+<html>
+  <head>
+    <title>Sign In</title>
+    <link rel = "stylesheet" href="login.css">
+  </head>
+
+  <body>
+    <div id = "leftSide">
+      <a href="/"><button id="homeBtn">Home</button></a>
+      <div id="loginImg">
+       <img src="loginImg.png" height="100%">
+      </div>
+      
+      <div class = "desc" style="margin-bottom:30px;">
+        <h3>Not yet a member </h3>
+        <h3> Join us today</h3>
+      </div>
+
+      <a href="/signup"><button id="signupBtn">Sign Up</button></a>
+    </div>
+    <div id = "rightSide">
+      <div class = "desc">
+        <h1>E-STORE</h1>
+        <p>Welcome Back!</p>
+      </div>
+      <div id = "errorBox">
+        <% if(error) {%>
+          <h3><%= error %></h3>
+        <% } %>
+      </div>
+      <form id="infoBox" action="/login" method="post">
+        <p style="margin-left:10%; font-size:15px">EMAIL</p>
+        <input id="username" name = "username" placeholder = "Your Username"/>
+        <br>
+        <br>
+        <p style="margin-left:10%; font-size:15px">PASSWORD</p>
+        <input id="password" name = "password" type="password" placeholder = "Your Password"/>
+        
+        <input id="loginBtn" type = "submit" value="login"/>
+      
+      </form>
+    </div>
+
+  <body>
+
+  <script>
+    var errorBox = document.getElementById("errorBox");
+    var arr = errorBox.children;
+    if(arr[0]==undefined){
+      errorBox.style.display = "none";
+    }else{
+      var text = arr[0].innerHTML;
+
+      if(text==null||text==""){
+        errorBox.style.display = "none";
+
+      }else{
+        errorBox.style.display = "block";
+      }
+    }
+  </script>
+</html>

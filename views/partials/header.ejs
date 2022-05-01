@@ -1,0 +1,18 @@
+<div id="header" style="margin:0; padding:0">
+    <h1 style="margin:0; padding:0; margin-left: 15px;">E - Store</h1>
+    <% if(user) { %>
+      <image src = "<%= user.profile_pic%>" style = "display:none; padding:0; margin:0"/>
+      <form method="post" action="/logout" style="height:100%; padding:0; margin:0;">
+        <input id="logoutBtn" type="submit" value="Log Out" />
+      </form>
+    <% }else {%>
+      <div id="authBtn">
+        <form method="get" action="/login" style="height:100%; padding:0; margin:0;">
+          <input id="signinBtn" type="submit" value="Log In" />
+        </form>
+        <form method="get" action="/signup" style="height:100%; padding:0; margin:0;">
+          <input id="signupBtn" type="submit" value="Sign Up" />
+        </form>
+      </div>
+    <% } %>
+  </div>

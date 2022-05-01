@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Home</title>
+    <link rel="stylesheet" href="home.css">
+  </head>
+  <body>
+    <%- include("partials/header", {user:user}) %>
+    <div id="mainBox">
+      <div id="welcomeBox">
+      
+      <h1 style="padding:0; margin:0; ">Welcome to E-Store</h1>
+      
+      </div>
+      <% for(var i=0;i<products.length;i++){ %>
+        <div id = "productRow">
+          <% var j=0 %>
+          <% while(j<3&&i<products.length){ %>
+            <div id="productBox">
+              <div class="imgDiv" style="border-bottom:2px solid black;"></div>
+              <h4> <%= products[i].name %> </h4>
+              <h4> <%= products[i].price %> </h4>
+              <div class="productBtnDiv" id="<%= products[i]._id %>">
+                <button class="productBtn" style="margin-bottom:15px;">View Description</button>
+                <button class="productBtn" id="addToCartBtn" style="margin-bottom:15px;">Add to Cart</button>
+              </div>
+            </div>
+            <% j = j+1 %>
+            <% i = i+1 %>
+          <% } %>
+        </div>
+        <% i = i-1 %>
+      <% } %>
+    </div>
+  </body>
+  <script src="home.js"> </script>
+</html>
