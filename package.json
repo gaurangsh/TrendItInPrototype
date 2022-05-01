@@ -1,0 +1,29 @@
+{
+  "name": "trenditinprototype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaurangsh/TrendItInPrototype.git"
+  },
+  "author": "Gaurang Shukla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gaurangsh/TrendItInPrototype/issues"
+  },
+  "homepage": "https://github.com/gaurangsh/TrendItInPrototype#readme",
+  "dependencies": {
+    "express": "*",
+    "fs":"*",
+    "ejs":"3.1.6",
+    "mongoose":"6.2.10",
+    "multer":"1.4.4",
+    "express-session":"1.17.2",
+    "node-mailjet":"*"
+  }
+
+}
